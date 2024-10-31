@@ -4,7 +4,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: gtfs
+      POSTGRES_DB: item
     ports:
       - "5432:5432"
 
@@ -13,8 +13,8 @@ services:
     depends_on:
       - db
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/gtfs
-      SPRING_DATASOURCE_USERNAME: postgres
-      SPRING_DATASOURCE_PASSWORD: postgres
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/item
+      SPRING_DATASOURCE_USERNAME: user01
+      SPRING_DATASOURCE_PASSWORD: pass01
     ports:
       - "8080:8080"
