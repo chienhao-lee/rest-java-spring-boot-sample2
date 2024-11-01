@@ -2,6 +2,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.3.5'
 	id 'io.spring.dependency-management' version '1.1.6'
+//	id "org.hibernate.orm" version "6.6.1.Final"
 }
 
 group = 'com.example'
@@ -18,9 +19,14 @@ repositories {
 }
 
 dependencies {
+//	implementation group: 'org.hibernate.orm', name: 'hibernate-spatial', version: '6.3.0.CR1'
+//	compile group: 'org.hibernate', name: 'hibernate-core', version: '3.6.7.Final'
+//	classpath 'org.hibernate.orm:hibernate-gradle-plugin:6.3.1.Final'
+//	implementation 'org.hibernate:hibernate-spatial'
 	implementation 'org.springframework.boot:spring-boot-starter'	
 	implementation 'org.springframework.boot:spring-boot-starter-web'	
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.hibernate.orm:hibernate-spatial'
 	implementation 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
