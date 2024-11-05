@@ -2,20 +2,27 @@ package com.example.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+
+import org.locationtech.jts.geom.Geometry;
 
 @Entity
 public class GeoSample {
     
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name")
+//    @Column(name = "name")
     private String name;
 
-    @Column(columnDefinition = "TEXT")
-    private String geom;  // Store Well-Known Text (WKT) representation
-
+//    @Column(name = "geom")
+//    @Column(name = "geom", columnDefinition = "geometry(LineString,4326)")
+    @Column(columnDefinition = "geometry") 
+    private Geometry geom;
+    
     public Long getId() {
         return id;
     }
@@ -32,11 +39,11 @@ public class GeoSample {
         this.name = name;
     }
 
-    public String getGeom() {
+    public Geometry getGeom() {
         return geom;
     }
 
-    public void setGeom(String geom) {
+    public void setGeom(Geometry geom) {
         this.geom = geom;
     }
 }

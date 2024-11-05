@@ -19,14 +19,12 @@ repositories {
 }
 
 dependencies {
-//	implementation group: 'org.hibernate.orm', name: 'hibernate-spatial', version: '6.3.0.CR1'
-//	compile group: 'org.hibernate', name: 'hibernate-core', version: '3.6.7.Final'
-//	classpath 'org.hibernate.orm:hibernate-gradle-plugin:6.3.1.Final'
-//	implementation 'org.hibernate:hibernate-spatial'
+//	implementation 'com.vividsolutions:jts:1.13'
+//	implementation 'org.hibernate:hibernate-core:6.6.1.Final'
+	implementation 'org.hibernate:hibernate-spatial:6.6.1.Final'
 	implementation 'org.springframework.boot:spring-boot-starter'	
 	implementation 'org.springframework.boot:spring-boot-starter-web'	
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.hibernate.orm:hibernate-spatial'
 	implementation 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'

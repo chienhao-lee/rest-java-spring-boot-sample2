@@ -10,5 +10,5 @@ import com.example.entity.GeoSample;
 public interface GeoSampleRepository extends JpaRepository<GeoSample, Long> {
 
     @Query(value = "SELECT id, name, ST_AsEWKT(geom) as geom FROM geo_sample WHERE id = :id", nativeQuery = true)
-    GeoSample findGeoSampleById(Long id);
+	GeoSample findGeoSampleById(Long id);
 }
